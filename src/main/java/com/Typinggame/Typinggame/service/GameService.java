@@ -24,16 +24,17 @@ public class GameService {
         Game game = new Game();
         game.setId(UUID.randomUUID().toString());
         game.setStartTime(LocalDateTime.now());
-        game.setWords(gen.getRandomWord());
         return repo.save(game);
     }
 
-    public Game endGame(String gameId){
+    public Game endGame(String gameId, Game gameData){
         Optional<Game> game = repo.findById(gameId);
         if (game.isEmpty()){
             return null;
         }
-        game.get().setEndTime(LocalDateTime.now());
+        Game existingGame = game.get();
+        existingGame.setEndTime(LocalDateTime.now());
+        existingGame.setWPM(gameData.getWPM());
         return repo.save(game.get());
     }
     

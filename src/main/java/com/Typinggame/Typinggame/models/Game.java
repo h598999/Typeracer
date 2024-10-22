@@ -21,7 +21,7 @@ public class Game {
 
     private LocalDateTime endTime;
 
-    private String words;
+    private int WPM;
 
     @ManyToMany(mappedBy = "gamesPlayed")
     private List<User> players;
@@ -59,19 +59,19 @@ public class Game {
         this.endTime = endTime;
     }
 
-    public String getWords() {
-        return words;
-    }
-
-    public void setWords(String string) {
-        this.words = string;
-    }
-
     public List<User> getPlayers() {
         return players;
     }
 
     public void setPlayers(List<User> players) {
         this.players = players;
+    }
+
+    public int getWPM() {
+        return WPM;
+    }
+
+    public void setWPM(int wPM) {
+        WPM = wPM;
     }
 }
