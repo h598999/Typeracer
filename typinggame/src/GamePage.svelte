@@ -8,9 +8,6 @@
     
 </script>
 
-<style>
-</style>
-
 <Menu {activeView} {setActiveView} />
 
 <SpGame />
