@@ -22,10 +22,13 @@ dependencies {
 	// implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("org.springframework.boot:spring-boot-starter-web")
   implementation("org.postgresql:postgresql:42.6.0")
+  // https://mvnrepository.com/artifact/org.springframework/spring-messaging
+  implementation("org.springframework:spring-messaging")
   // implementation("com.h2database:h2")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	// testImplementation("org.springframework.security:spring-security-test")
-	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+  implementation("org.springframework.boot:spring-boot-starter-websocket")
+  testImplementation("org.springframework.boot:spring-boot-starter-test")
+  testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 tasks.withType<Test> {
