@@ -69,8 +69,11 @@ function endGame() {
 
     // Create the game object to send to the backend
     const gameData = {
-endTime: new Date(endTime), // Convert end time to a proper date
+        endTime: new Date(endTime), // Convert end time to a proper date
          wpm: parseInt(wpm), // WPM should be an integer
+         voteOptions: [
+            
+         ]
     };
 
     // Send the gameData to the backend
